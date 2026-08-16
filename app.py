@@ -24,3 +24,13 @@ elif memory_usage <= 80:
 
 else:
     print("SAP Memory Usage:", memory_usage, "%", "Critical! Memory usage is high, action needed")
+
+Disk_Usage = 75
+print("Disk Usage:", Disk_Usage, "%")
+
+if Disk_Usage <= 60:
+    print("Disk Usage:", Disk_Usage, "%", "The Disk usage is normal")
+elif Disk_Usage <= 80:
+    print("Disk Usage:", Disk_Usage, "%", "Warning! The Disk usage is slightly high")
+else:
+    print("Disk Usage:", Disk_Usage, "%", "Critical! The Disk usage is very high")
