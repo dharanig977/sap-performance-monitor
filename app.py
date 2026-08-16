@@ -46,3 +46,18 @@ elif CPU_usage > 60 or memory_usage > 60 or Disk_Usage > 60:
     print("WARNING! SAP system performance needs monitoring")
 else:
     print("NORMAL! SAP system performance is healthy")
+
+# Background Job status - SM37
+
+Job_status = "FAILED"
+
+print("\nSAP Background job status:", Job_status)
+
+if Job_status == "COMPLETED":
+    print("Background job completed successfully")
+elif Job_status == "RUNNING":
+    print("Background job is still running")
+elif Job_status == "FAILED":
+    print("Background job failed, attention needed")
+else:
+    print("Job status unknown")
