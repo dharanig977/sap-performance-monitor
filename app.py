@@ -61,3 +61,21 @@ elif Job_status == "FAILED":
     print("Background job failed, attention needed")
 else:
     print("Job status unknown")
+
+# SAP Work Process Monitoring - SM50
+
+work_process_status = "RUNNING"
+
+print("\nSAP Work Process Status:", work_process_status)
+
+if work_process_status == "WAITING":
+    print("Work process is Normal")
+
+elif work_process_status == "RUNNING":
+    print("Work process is Active")
+
+elif work_process_status == "STOPPED":
+    print("Work process is Critical")
+
+else:
+    print("Status unknown")
