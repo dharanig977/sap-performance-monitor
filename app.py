@@ -1,4 +1,6 @@
 print ("SAP Performance monitor is starting....")
+
+# CPU Usage monitoring
 CPU_usage = 90
 
 print("SAP CPU Usage:", CPU_usage, "%")
@@ -12,6 +14,7 @@ elif CPU_usage <=80:
 else:
     print("SAP CPU Usage:", CPU_usage, "%", "Critical, CPU Performnace is high, action needed")
 
+# Memory usage monitoring
 memory_usage = 65
 
 print("SAP Memory Usage:", memory_usage, "%")
@@ -25,6 +28,7 @@ elif memory_usage <= 80:
 else:
     print("SAP Memory Usage:", memory_usage, "%", "Critical! Memory usage is high, action needed")
 
+# Disk Usage monitoring
 Disk_Usage = 75
 print("Disk Usage:", Disk_Usage, "%")
 
@@ -34,3 +38,11 @@ elif Disk_Usage <= 80:
     print("Disk Usage:", Disk_Usage, "%", "Warning! The Disk usage is slightly high")
 else:
     print("Disk Usage:", Disk_Usage, "%", "Critical! The Disk usage is very high")
+
+print("\nOverall SAP System Status:")
+if CPU_usage > 80 or memory_usage > 80 or Disk_Usage > 80:
+    print("CRITICAL! SAP system performance needs immediate attention")
+elif CPU_usage > 60 or memory_usage > 60 or Disk_Usage > 60:
+    print("WARNING! SAP system performance needs monitoring")
+else:
+    print("NORMAL! SAP system performance is healthy")
