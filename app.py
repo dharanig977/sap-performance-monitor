@@ -79,3 +79,18 @@ elif work_process_status == "STOPPED":
 
 else:
     print("Status unknown")
+
+# SAP Short Dump Monitoring - ST22
+
+dump_count = 7
+
+print("\nSAP Short Dump Count:", dump_count)
+
+if dump_count == 0:
+    print("System is normal")
+
+elif dump_count <= 5:
+    print("Warning! System has dumps")
+
+else:
+    print("Critical! Multiple short dumps detected, action needed")
